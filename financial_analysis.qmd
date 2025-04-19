@@ -1,0 +1,112 @@
+---
+title: "Financial Analysis for NVDA and AAPL (2024)"
+author: "Dheeraj Shetty"
+date: "8 April 2025"
+execute: 
+  echo: true
+format: docx
+editor: visual
+jupyter: python3
+---
+
+## **Introduction**
+
+This report analyzes the stock performance of NVIDIA (NVDA) and Apple (AAPL) for the year 2024 using the \`yfinance\` Python package. The analysis includes the number of up days, realized gain/loss, and a 20-day moving average, with visualizations to compare the stocks.
+
+## **Methodology**
+
+Stock data was downloaded for NVDA and AAPL from January 1, 2024, to December 31, 2024. The following metrics were calculated: -
+
+**\*\*Up Days\*\***: Number of days the stock's closing price increased. -
+
+**\*\*Realized Gain/Loss\*\***: Percentage change in closing price over the period. -
+
+**\*\*20-Day Moving Average\*\***: A lagging 20-day moving average of the closing price.
+
+The analysis was performed using reusable functions stored in \`utils_Shetty.py\`, ensuring scalability and reproducibility.
+
+```{python}
+#| echo: false
+
+from utils_Shetty import download_stock_data, calculate_up_days, calculate_realized_gain_loss, calculate_moving_average, plot_stock_data
+
+import matplotlib.pyplot as plt
+```
+
+Defining the stocks and date range for the analysis
+
+```{python}
+
+# Define the stocks and date range
+
+tickers = ["NVDA", "AAPL"]
+start_date = "2024-01-01"
+end_date = "2024-12-31"
+```
+
+```{python}
+
+# Lists to store metrics for comparison
+
+gains_losses = []
+```
+
+Analyzing the data for each stock
+
+```{python}
+
+# Download and analyze data for each stock
+
+for ticker in tickers:
+    data = download_stock_data(ticker, start_date, end_date)
+    
+    if data is not None:
+        up_days = calculate_up_days(data)
+        realized_gain_loss = calculate_realized_gain_loss(data)
+        data = calculate_moving_average(data)
+        
+        print(f"Analysis for {ticker}:")
+        print(f"Number of Up Days: {up_days}")
+        if realized_gain_loss is not None:
+            print(f"Realized Gain/Loss: {realized_gain_loss:.2f}%")
+        else:
+            print("Realized Gain/Loss: Could not be calculated")
+        
+        plot_stock_data(data, ticker)
+        print(f"[Plot for {ticker}]\n")
+        
+        if realized_gain_loss is not None:
+            gains_losses.append((ticker, realized_gain_loss))
+
+```
+
+A bar chart for comparing Realized Gain/Loss between NVDA and AAPL
+
+```{python}
+
+# Comparison visual: Realized Gain/Loss
+
+if gains_losses:
+    tickers, values = zip(*gains_losses)
+    plt.figure(figsize=(8, 5))
+    plt.bar(tickers, values, color=['#76B900', '#4682b4'])
+    plt.title("Realized Gain/Loss Comparison (2024)")
+    plt.xlabel("Stock Ticker")
+    plt.ylabel("Realized Gain/Loss (%)")
+    plt.tight_layout()
+    plt.show()
+    print("[Comparison Plot: Realized Gain/Loss]\n")
+else:
+    print("Could not create comparison visual: No valid realized gain/loss data available.")
+
+```
+
+## Key Insights
+
+The analysis reveals stark differences in the performance of NVDA and AAPL in 2024. NVDA’s exceptional realized gain of 185.44% reflects its strong position in the AI and semiconductor markets, which have seen explosive growth due to advancements in artificial intelligence and machine learning. The stock’s high number of up days (140) and the upward trend in its 20-day moving average plot indicate consistent investor confidence and market momentum.
+
+In contrast, AAPL’s realized gain of 35.85% is more modest but still impressive, reflecting its status as a mature, stable company with a loyal customer base and diversified revenue streams. AAPL’s slightly higher number of up days (142) suggests it experienced more consistent daily gains, but its overall growth was less dramatic than NVDA’s, likely due to its larger market capitalization and slower growth rate as a more established firm.
+
+The 20-day moving average plots provide further insight into the stocks’ behavior. NVDA’s plot shows higher volatility, with sharper increases and occasional corrections, which is typical for a high-growth stock in a rapidly evolving sector. AAPL’s plot, however, shows a smoother upward trajectory, indicating greater stability and lower risk, which may appeal to more conservative investors.
+
+From an investment perspective, NVDA may be more suitable for investors seeking high growth and willing to accept higher volatility, while AAPL may be a better fit for those prioritizing stability and steady returns. The choice between the two depends on an investor’s risk tolerance and investment goals.
