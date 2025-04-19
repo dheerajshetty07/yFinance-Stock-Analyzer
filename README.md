@@ -38,12 +38,14 @@ AAPL recorded a 35.85% gain with 142 up days, indicating stability and consisten
 - Regular Expressions (re): For input validation.
 - OS & sys: For console management.
 
+```
 stock-analyzer/
 ├── utils_Shetty.py              # Reusable functions for data downloading, analysis, and plotting
 ├── individual_stock_analyzer.py # Interactive script for user-driven analysis
 ├── financial_analysis.qmd       # Quarto file for the NVDA/AAPL analysis report
 ├── financial_analysis.pdf       # Rendered PDF report
 └── README.md                    # Project documentation
+```
 
 ## Installation & Setup
 
