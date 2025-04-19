@@ -9,15 +9,15 @@ This project was developed to scale financial analysis with clean, containerized
 
 ## Features
 
-Interactive Analysis: Users can input a stock ticker, date range (within 2024), and choose metrics (up days, realized gain/loss, or both) to analyze.
+**Interactive Analysis**: Users can input a stock ticker, date range (within 2024), and choose metrics (up days, realized gain/loss, or both) to analyze.
 
-Dynamic Visualizations: Generates plots of closing prices and 20-day moving averages, with an optional bar chart comparing realized gain/loss across stocks.
+**Dynamic Visualizations**: Generates plots of closing prices and 20-day moving averages, with an optional bar chart comparing realized gain/loss across stocks.
 
-Reusable Functions: Modular functions in utils_Shetty.py handle data downloading, metric calculations, and plotting, ensuring scalability.
+**Reusable Functions**: Modular functions in utils_Shetty.py handle data downloading, metric calculations, and plotting, ensuring scalability.
 
-Robust Error Handling: Validates user inputs (tickers, dates, metrics) with clear error messages to prevent crashes.
+**Robust Error Handling**: Validates user inputs (tickers, dates, metrics) with clear error messages to prevent crashes.
 
-Professional Reporting: A Quarto-rendered PDF report (financial_analysis.pdf) presents the analysis of NVDA and AAPL with insights and visualizations.
+**Professional Reporting**: A Quarto-rendered PDF report (financial_analysis.pdf) presents the analysis of NVDA and AAPL with insights and visualizations.
 
 
 ## Key Insights:
@@ -30,13 +30,13 @@ AAPL recorded a 35.85% gain with 142 up days, indicating stability and consisten
 
 ## Technologies Used
 
-Python: Core programming language.
-yfinance: For downloading stock data.
-pandas: For data manipulation and analysis.
-matplotlib: For creating visualizations.
-Quarto: For rendering professional reports.
-Regular Expressions (re): For input validation.
-OS & sys: For console management.
+- Python: Core programming language.
+- yfinance: For downloading stock data.
+- pandas: For data manipulation and analysis.
+- matplotlib: For creating visualizations.
+- Quarto: For rendering professional reports.
+- Regular Expressions (re): For input validation.
+- OS & sys: For console management.
 
 stock-analyzer/
 ├── utils_Shetty.py              # Reusable functions for data downloading, analysis, and plotting
@@ -71,20 +71,16 @@ Run individual_stock_analyzer.py and enter a stock ticker (e.g., NVDA), date ran
 
 Type quit to exit.
 
-Report Mode:
-
-The financial_analysis.pdf provides a detailed comparison of NVDA and AAPL, including visualizations and interpretations.
-
 
 ## Key Achievements
 
-Scalability: Modular functions in utils_Shetty.py are reusable for any stock and date range within 2024.
+- **Scalability**: Modular functions in utils_Shetty.py are reusable for any stock and date range within 2024.
 
-Error Handling: Comprehensive validation prevents crashes from invalid inputs (e.g., incorrect tickers or date formats).
+- **Error Handling**: Comprehensive validation prevents crashes from invalid inputs (e.g., incorrect tickers or date formats).
 
-Professional Output: The Quarto-rendered report is formatted for non-technical audiences, with clear visualizations and insights.
+- **Professional Output**: The Quarto-rendered report is formatted for non-technical audiences, with clear visualizations and insights.
 
-Interactive Design: The individual_stock_analyzer.py script allows dynamic user input, making the tool accessible and flexible.
+- **Interactive Design:** The individual_stock_analyzer.py script allows dynamic user input, making the tool accessible and flexible.
 
 
 ## Future Enhancements
