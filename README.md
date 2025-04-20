@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-The Stock Analyzer is an interactive Python application designed to perform financial analysis on stock market data for the year 2024. Leveraging the yfinance package, this project analyzes stock performance metrics such as up days, realized gain/loss, and 20-day moving averages for user-selected stocks. The application emphasizes code reusability, robust error handling, and professional visualizations using matplotlib.
+The purpose of this project was to create is an interactive Python application designed to perform financial analysis on stock market data for the year 2024. Leveraging the yfinance package, this project analyzes stock performance metrics such as up days, realized gain/loss, and 20-day moving averages for user-selected stocks. The application emphasizes code reusability, robust error handling, and professional visualizations using matplotlib.
 
 This project was developed to scale financial analysis with clean, containerized functions and an interactive user interface. It includes a comparative analysis of NVIDIA (NVDA) and Apple (AAPL) stocks, showcasing their performance in 2024.
 
