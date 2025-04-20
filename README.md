@@ -6,7 +6,7 @@ The purpose of this project was to create an interactive Python application desi
 
 This project was developed to scale financial analysis with clean, containerized functions and an interactive user interface. It includes a comparative analysis of NVIDIA (NVDA) and Apple (AAPL) stocks, showcasing their performance in 2024.
 
-Other users can easily adapt this tool for their own stock analysis. Simply run the individual_stock_analyzer.py script and input any valid stock ticker (e.g., TSLA, GOOGL) to analyze its performance within 2024. Choose a specific date range to focus on short-term or long-term trends, select metrics like up days or realized gain/loss to assess daily performance or overall returns, and opt for a plot to visualize price trends and moving averages. The tool’s error handling ensures a smooth experience by guiding you through invalid inputs, making it accessible for beginners and experts alike to explore stock data, compare investments, or build custom reports.
+Other users can easily adapt this tool for their own stock analysis. Simply run the individual_stock_analyzer.py script and input any valid stock ticker (e.g., TSLA, META) to analyze its performance within 2024. Choose a specific date range to focus on short-term or long-term trends, select metrics like up days or realized gain/loss to assess daily performance or overall returns, and opt for a plot to visualize price trends and moving averages. The tool’s error handling ensures a smooth experience by guiding you through invalid inputs, making it accessible for beginners and experts alike to explore stock data, compare investments, or build custom reports.
 
 
 ## Features
